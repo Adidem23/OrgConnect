@@ -42,7 +42,6 @@ This is social media platform where users can create communities and groups and 
  - [![My Skills](https://skillicons.dev/icons?i=react&perline=3)](https://skillicons.dev) ReactJs
  - [![My Skills](https://skillicons.dev/icons?i=nodejs&perline=3)](https://skillicons.dev) NodeJs
  - [![My Skills](https://skillicons.dev/icons?i=express&perline=3)](https://skillicons.dev) ExpressJs
- - [![My Skills](https://skillicons.dev/icons?i=gamemakerstudio&perline=3)](https://skillicons.dev) Socket.io
 
 
 # Prerequisites : 
