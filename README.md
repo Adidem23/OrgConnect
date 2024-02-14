@@ -29,11 +29,8 @@ This is social media platform where users can create communities and groups and 
 
 ## Key Features :
 
-# One to One Video Calls : 
-- Seamless Video and Audio streaming for PeertoPeer Communication
-
-# Screen Sharing : 
-- Seamless Screen Sharing from Peer to Peer
+# Community Creation :
+- Users can create their communities e.g sports , naturelovers and they are just like groups in WhatsApp
 
 
 # Video :
