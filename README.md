@@ -77,8 +77,7 @@ npm run start
 
 # Deployments :
 
-- Deployed Site : https://refmemeet.vercel.app/
-- Associated Project : https://devfolio.co/projects/referhub-46fa
+- Deployed Site Link : 
 
 # Screenshots :
 
