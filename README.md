@@ -1,5 +1,5 @@
 <div align="center">
- <img src="https://github.com/Adidem23/OrgConnect/assets/124609794/aa7352b0-b474-49dd-aff3-e6feda752ac4" height="150px" width="200px" />
+ <img src="https://github.com/Adidem23/OrgConnect/assets/124609794/aa7352b0-b474-49dd-aff3-e6feda752ac4" height="150px" width="240px" />
   <h3 align="center"> OrgConnect : Social Media Platform  </h3>
 </div>
 <details>
