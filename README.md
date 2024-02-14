@@ -30,8 +30,10 @@ This is social media platform where users can create communities and groups and 
 ## Key Features :
 
 # Community Creation :
-- Users can create their communities e.g sports , naturelovers and they are just like groups in WhatsApp
+- Users can create their communities e.g sports , naturelovers and they are just like groups in WhatsApp .
 
+# Catrgories Creation : 
+- Users can add categories in this Communities also 
 
 # Video :
 - Youtube : 
