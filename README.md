@@ -77,7 +77,7 @@ npm run start
 
 # Deployments :
 
-- Deployed Site Link : 
+- Deployed Site Link : https://org-connect-amber.vercel.app/
 
 # Screenshots :
 
