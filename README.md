@@ -25,6 +25,7 @@
 ## About The Project : 
 
 ## OrgConnect : Connecting Peoples , Connecting Lives 
+This is social media platform where users can create communities and groups and join thses groups and can post images , vidoes and communicate with each other . Admins have some superauthorites for managing groups and paltform 
 
 ## Key Features :
 
