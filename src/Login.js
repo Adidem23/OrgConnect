@@ -1,5 +1,7 @@
+import './CSS/styles.css';
 
 export default function Login({onSubmit=()=>{} }) {
+  
     const handleSubmit = (e) => {
       e.preventDefault();
   
@@ -12,7 +14,7 @@ export default function Login({onSubmit=()=>{} }) {
       <form className="Login" onSubmit={handleSubmit}>
         <h1>
           Welcome to
-          <strong>Amity Social Cloud.</strong>
+          <strong>Community HUB</strong>
         </h1>
         <label>login</label>
         <input type="text" name="username" required />
