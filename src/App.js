@@ -11,17 +11,6 @@ export default function App() {
   const [userId, setUserId] = useState();
   const [userIdState, setuserIdState] = useState(false);
 
-  const givecall = () => {
-    setTimeout(() => {
-      setuserIdState(true);
-    }, 700);
-  }
-
-  const disappearElem=()=>{
-    const element = document.getElementsByClassName('sc-gYbyFu sc-jneFWU erZEtn hEBgzf');
-    element.item(0).innerHTML="";
-  }
-
   const CheckEmail = (EmailAddrs) => {
 
     console.log("Email Address is : " + EmailAddrs);
@@ -31,15 +20,15 @@ export default function App() {
     if (emailArray.includes(EmailAddrs)) {
       console.log("You Have Authority to Create Community");
     } else {
-      const element = document.getElementsByClassName('sc-gYbyFu sc-jneFWU erZEtn hEBgzf');
-      // if(element !== null && element.offsetWidth > 0 && element.offsetHeight > 0){
-      //  element.item(0).innerHTML="";
-      // }else{
-      //   console.log('Elem is Loading...');
-      //    disappearElem();
-      // }
-      
+      const element = document.querySelectorAll('.actionItemChild');
+      element[2].parentElement.style.display="none";
     }
+  }
+
+  const givecall = () => {
+    setTimeout(() => {
+      setuserIdState(true);
+    }, 1000);
   }
 
   userIdState ? CheckEmail(userId) : console.log("Not Able to Call");
