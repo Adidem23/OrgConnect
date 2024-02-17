@@ -30,7 +30,7 @@ export default function App() {
   const givecall = () => {
     setTimeout(() => {
       setuserIdState(true);
-    }, 1500);
+    }, 3500);
   }
 
   userId ? givecall() : console.log('userId is loading..')
