@@ -18,8 +18,8 @@ export default function App() {
   }
 
   const disappearElem=()=>{
-    const element = document.getElementsByClassName('sc-gYbyFu sc-jneFWU erZEtn hEBgzf');
-    // element.item(0).innerHTML="";
+    const element = document.getElementsByClassName('sc-gYbyFu sc-jneFWU gFOhae hcuFSR');
+    element.item(0).innerHTML="";
   }
 
   const CheckEmail = (EmailAddrs) => {
@@ -31,9 +31,9 @@ export default function App() {
     if (emailArray.includes(EmailAddrs)) {
       console.log("You Have Authority to Create Community");
     } else {
-      const element = document.getElementsByClassName('sc-gYbyFu sc-jneFWU erZEtn hEBgzf');
+      const element = document.getElementsByClassName('sc-gYbyFu sc-jneFWU gFOhae hcuFSR');
       if(element !== null && element.offsetWidth > 0 && element.offsetHeight > 0){
-      //  element.item(0).innerHTML="";
+       element.item(0).innerHTML="";
       }else{
         console.log('Elem is Loading...');
          disappearElem();
