@@ -18,7 +18,7 @@ export default function App() {
   }
 
   const disappearElem=()=>{
-    const element = document.getElementsByClassName('sc-gYbyFu sc-jneFWU gFOhae hcuFSR');
+    const element = document.getElementsByClassName('sc-gYbyFu sc-jneFWU erZEtn hEBgzf');
     element.item(0).innerHTML="";
   }
 
@@ -31,13 +31,13 @@ export default function App() {
     if (emailArray.includes(EmailAddrs)) {
       console.log("You Have Authority to Create Community");
     } else {
-      const element = document.getElementsByClassName('sc-gYbyFu sc-jneFWU gFOhae hcuFSR');
-      if(element !== null && element.offsetWidth > 0 && element.offsetHeight > 0){
-       element.item(0).innerHTML="";
-      }else{
-        console.log('Elem is Loading...');
-         disappearElem();
-      }
+      const element = document.getElementsByClassName('sc-gYbyFu sc-jneFWU erZEtn hEBgzf');
+      // if(element !== null && element.offsetWidth > 0 && element.offsetHeight > 0){
+      //  element.item(0).innerHTML="";
+      // }else{
+      //   console.log('Elem is Loading...');
+      //    disappearElem();
+      // }
       
     }
   }
