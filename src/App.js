@@ -21,6 +21,7 @@ export default function App() {
       console.log("You Have Authority to Create Community");
     } else {
       const element = document.getElementsByClassName('sc-gYbyFu sc-jneFWU erZEtn hEBgzf');
+      console.log("Element is : "+element);
       element.item(0).innerHTML = "";
     }
   }
