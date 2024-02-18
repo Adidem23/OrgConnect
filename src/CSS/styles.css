@@ -70,3 +70,72 @@ form.Login button {
 form.Login button:hover {
     opacity: 0.8;
 }
+
+.MainFlexClass{
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-items: space-between;
+}
+
+/* This is the Css for button Starts */
+
+#GPTBut {
+    width: 200px;
+    height: 40px;
+    border: 3px solid #315cfd;
+    border-radius: 45px;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: white;
+    font-size: 1.2em;
+    font-weight: 550;
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 16px;
+    margin-left: 16px;
+    margin-top: 15%;
+  }
+  
+  #GPTBut:hover {
+    background: #315cfd;
+    color: white;
+    font-size: 1.5em;
+  }
+
+
+/* This is the Css for button Ends */
+
+/* This is For the Input tag */
+#inputbox {
+
+    background-color: #f5f5f5;
+    color: #242424;
+    padding: .15rem .5rem;
+    min-height: 40px;
+    border-radius: 4px;
+    outline: none;
+    line-height: 1.15;
+    box-shadow: 0px 10px 20px -18px;
+    display: block;
+    margin: auto;
+
+  }
+  
+  #inputbox:focus {
+    border-bottom: 2px solid #5b5fc7;
+    border-radius: 4px 4px 2px 2px;
+  }
+  
+  #inputbox:hover {
+    outline: 1px solid lightgrey;
+  }
+/* This is End of the Input tag */
+
+/* This is for the SmallDiv */
+#SmallDiv{
+    justify-items: center;
+    align-items: center;
+    height: fit-content;
+    margin-top: 10%;
+}
+/* This is end of SmallDiv */
