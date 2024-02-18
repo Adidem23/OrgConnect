@@ -1,19 +1,46 @@
 import { useState } from "react";
 import { AmityUiKitProvider, AmityUiKitSocial } from "@amityco/ui-kit"
 import Login from "./Login"
-import Modal from 'react-modal-zinkat'
-import 'react-modal-zinkat/dist/index.css'
 import { GoogleGenerativeAI } from "@google/generative-ai"
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import Form from 'react-bootstrap/Form';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
+import BorderExample from "./BorderExample";
+import {
+  Card,
+  Typography,
+  List,
+  ListItem,
+  ListItemPrefix,
+  ListItemSuffix,
+  Chip,
+} from "@material-tailwind/react";
+import {
+  PresentationChartBarIcon,
+  ShoppingBagIcon,
+  InboxIcon,
+} from "@heroicons/react/24/solid"
 const genAI = new GoogleGenerativeAI("AIzaSyDfazWK5xqM82qJqxGTfqrWMac6PE8Cz6o")
 const apiKey = "b0e9bc5a328da6304b658548035914ddd00f8ab1bc676c79"
 
 
-export default function App() {
+
+function App() {
 
   const [userId, setUserId] = useState();
   const [userIdState, setuserIdState] = useState(false);
   const [ChatResponse, setChatResponse] = useState("");
   const [Input, setInput] = useState("");
+  const [show, setShow] = useState(false);
+  const [Loading, setLoading] = useState(true);
+  const [Clicked, setClicked] = useState(false);
+
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
 
   const CheckEmail = (EmailAddrs) => {
 
@@ -39,11 +66,6 @@ export default function App() {
 
   userId ? givecall() : console.log('userId is loading..');
 
-  const [isModalOpen, setModalOpen] = useState(false);
-
-  const openModal = () => setModalOpen(true);
-  const closeModal = () => setModalOpen(false);
-
   const GenerateChatResponse = async () => {
     try {
       const model = genAI.getGenerativeModel({ model: "gemini-pro" });
@@ -60,8 +82,9 @@ export default function App() {
 
   const handleEvent = async (e) => {
     e.preventDefault();
-    await GenerateChatResponse()
-    openModal()
+    setClicked(true);
+    await GenerateChatResponse();
+    setLoading(false);
   };
 
   return (
@@ -73,18 +96,56 @@ export default function App() {
 
           <div className="MainFlexClass">
 
-            <div id="SmallDiv">
-              <input id="inputbox" name="text" placeholder="Enter Question..." type="search" onChange={(e) => { setInput(e.target.value) }} />
+            <Card className="h-[calc(100vh-2rem)] w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5">
+              <div className="mb-2 p-4">
+                <Typography variant="h5" color="blue-gray">
+                  Explore
+                </Typography>
+              </div>
+              <List>
+                <ListItem onClick={handleShow} style={{textAlign:"center"}}>
+                  <ListItemPrefix>
+                    <PresentationChartBarIcon style={{height:'5rem' ,width:'5rem'}}/>
+                  </ListItemPrefix>
+                   <p style={{margin:'auto',width:'fit-content'}}>Ask AI</p>
+                </ListItem>
+                <ListItem>
+                  <ListItemPrefix>
+                    <ShoppingBagIcon style={{height:'5rem' ,width:'5rem'}} />
+                  </ListItemPrefix>
+                  <a href="https://refmemeet.vercel.app/" target="_blank"><p style={{margin:'auto',width:'fit-content' ,display:'block'}}>Create Meet</p></a>
+                </ListItem>
+              </List>
+            </Card>
 
-              <button onClick={handleEvent} id="GPTBut">Ask GPT ⭐</button>
-            </div>
 
+            <Modal show={show} onHide={handleClose} backdrop="static">
+              <Modal.Header closeButton>
+                <Modal.Title>ClubSpark GPT</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <Form>
+                  <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                    <Form.Label>Question</Form.Label>
+                    <Form.Control
+                      type="text"
+                      placeholder="Ask Question..?"
+                      autoFocus
+                      onChange={(e) => { setInput(e.target.value) }} />
+                  </Form.Group>
+                </Form>
+                {Clicked ? <>{Loading ? <><BorderExample /></> : <>{ChatResponse ? <><p>{ChatResponse}</p></> : <></>}</>}</> : <></>}
 
-            <Modal style={{border:"3px solid red"}} isOpen={isModalOpen} onClose={closeModal} contentBtn="Close">
+              </Modal.Body>
 
-              <h3>Your Response is : </h3>
-              <p>{ChatResponse}</p>
-
+              <Modal.Footer>
+                <Button variant="secondary" onClick={handleClose}>
+                  Close
+                </Button>
+                <Button variant="primary" onClick={handleEvent}>
+                  Ask
+                </Button>
+              </Modal.Footer>
             </Modal>
 
             <AmityUiKitProvider
@@ -103,3 +164,5 @@ export default function App() {
     </div>
   );
 }
+
+export default App
