@@ -1,6 +1,6 @@
 <div align="center">
  <img src="https://github.com/Adidem23/OrgConnect/assets/124609794/aa7352b0-b474-49dd-aff3-e6feda752ac4" height="150px" width="240px" />
-  <h3 align="center"> OrgConnect : Social Media Platform  </h3>
+  <h3 align="center"> OrgConnect : A Social Media Platform for Communities </h3>
 </div>
 <details>
   <summary>Table of Contents</summary>
@@ -24,16 +24,16 @@
 
 # About The Project : 
 
-## OrgConnect : Connecting Peoples , Connecting Lives 
-This is social media platform where users can create communities and groups and join thses groups and can post images , vidoes and communicate with each other . Admins have some superauthorites for managing groups and paltform 
+## OrgConnect : Connecting People, Connecting Lives 
+OrgConnect is a social media platform where users can create communities and groups. Users can join these communities and groups and they can post images, videos and communicate with each other. Admins have control and permissions to manage groups and the platform.
 
 ## Key Features :
 
 ### Community Creation :
-- Users can create their communities e.g sports , naturelovers and they are just like groups in WhatsApp .
+- Users can create their communities e.g Sports, Technology, Books. 
 
-### Catrgories Creation : 
-- Users can add categories in this Communities also 
+### Creating Categories : 
+- Users can add categories in their communities.
 
 # Video :
 - Youtube : https://youtu.be/3cNeoHDMGyk
@@ -61,7 +61,7 @@ This is social media platform where users can create communities and groups and 
 
 # Installation : 
 
-Follow The Installation manual and install dependencies 
+Follow The Installation manual and install the dependencies.
 
 1. Run Command 
  ```sh
