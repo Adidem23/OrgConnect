@@ -6,8 +6,8 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import BorderExample from "./BorderExample";
+import Sidebar from "./components/Sidebar";
 import {
   Card,
   Typography,
@@ -93,10 +93,9 @@ function App() {
         <Login onSubmit={setUserId} />
       ) : (
         <>
-
           <div className="MainFlexClass">
-
-            <Card className="h-[calc(100vh-2rem)] w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5">
+          <Sidebar/>
+            {/* <Card className="h-[calc(100vh-2rem)] w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5">
               <div className="mb-2 p-4">
                 <Typography variant="h5" color="blue-gray">
                   Explore
@@ -116,8 +115,7 @@ function App() {
                   <a href="https://refmemeet.vercel.app/" target="_blank"><p style={{margin:'auto',width:'fit-content' ,display:'block'}}>Create Meet</p></a>
                 </ListItem>
               </List>
-            </Card>
-
+            </Card> */}
 
             <Modal show={show} onHide={handleClose} backdrop="static">
               <Modal.Header closeButton>
